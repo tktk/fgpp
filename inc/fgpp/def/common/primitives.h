@@ -27,32 +27,22 @@ namespace fg {
     typedef char32_t Utf32Char;
 
     template< typename CHAR_T >
-    class StringViewTmpl
+    class StringTmpl
     {
     private:
         CHAR_T *    ptr;
         Size        length;
 
     public:
-        StringViewTmpl(
+        StringTmpl(
         ) = default;
 
-        StringViewTmpl(
+        StringTmpl(
             decltype( ptr )         _ptr
             , decltype( length )    _length
         )
             : ptr( _ptr )
             , length( _length )
-        {
-        }
-
-        StringViewTmpl(
-            std::basic_string< CHAR_T > &   _string
-        )
-            : StringViewTmpl(
-                const_cast< CHAR_T * >( _string.data() )
-                , _string.length()
-            )
         {
         }
 
@@ -92,6 +82,16 @@ namespace fg {
             this->length = _length;
         }
 
+        StringTmpl(
+            std::basic_string< CHAR_T > &   _string
+        )
+            : StringTmpl(
+                const_cast< CHAR_T * >( _string.data() )
+                , _string.length()
+            )
+        {
+        }
+
         void assign(
             std::basic_string< CHAR_T > &   _string
         )
@@ -103,15 +103,29 @@ namespace fg {
         }
     };
 
-    typedef StringViewTmpl< StringChar > StringView;
-    typedef StringViewTmpl< Utf8Char > Utf8View;
-    typedef StringViewTmpl< Utf16Char > Utf16View;
-    typedef StringViewTmpl< Utf32Char > Utf32View;
+    class String : public StringTmpl< StringChar >
+    {
+    public:
+        using StringTmpl< StringChar >::StringTmpl;
+    };
 
-    typedef std::basic_string< StringChar > String;
-    typedef std::basic_string< Utf8Char > Utf8;
-    typedef std::basic_string< Utf16Char > Utf16;
-    typedef std::basic_string< Utf32Char > Utf32;
+    class Utf8 : public StringTmpl< Utf8Char >
+    {
+    public:
+        using StringTmpl< Utf8Char >::StringTmpl;
+    };
+
+    class Utf16 : public StringTmpl< Utf16Char >
+    {
+    public:
+        using StringTmpl< Utf16Char >::StringTmpl;
+    };
+
+    class Utf32 : public StringTmpl< Utf32Char >
+    {
+    public:
+        using StringTmpl< Utf32Char >::StringTmpl;
+    };
 }
 
 #endif  // FGPP_DEF_COMMON_PRIMITIVES_H
