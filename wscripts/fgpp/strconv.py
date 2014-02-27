@@ -15,6 +15,7 @@ def build( _context ):
             common.SOURCE_DIR : {
                 common.FGPP : {
                     _MODULE_NAME : {
+                        'tostring.cpp',
                         'toutf32.cpp',
                     },
                 },
