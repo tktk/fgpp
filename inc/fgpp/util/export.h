@@ -1,6 +1,7 @@
 ﻿#ifndef FGPP_UTIL_EXPORT_H
 #define FGPP_UTIL_EXPORT_H
 
+#include "fgpp/def/common/primitives.h"
 #include "fgpp/util/exportcommon.h"
 
 #define FGPP_DECLARE_FUNCTION( _func, _returnType ) \

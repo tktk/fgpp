@@ -3,6 +3,8 @@
 
 #ifndef FGPPEXPORT
 
+#   include "fgpp/def/common/primitives.h"
+
 #   if defined COMPILER_TYPE_CLANG  // COMPILER_TYPE
 #       define FGPPEXPORT extern
 #   elif defined COMPILER_TYPE_MSVC // COMPILER_TYPE
