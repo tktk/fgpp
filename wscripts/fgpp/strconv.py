@@ -11,7 +11,7 @@ def build( _context ):
     buildShlib(
         _context,
         TARGET,
-        sources = {
+        {
             common.SOURCE_DIR : {
                 common.FGPP : {
                     _MODULE_NAME : {

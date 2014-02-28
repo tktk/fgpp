@@ -14,15 +14,13 @@ def getTargetName(
 def buildShlib(
     _context,
     _target,
-    sources = set(),
-    useModules = set(),
+    _sources,
 ):
     _build(
         _context.shlib,
         _context,
         _target,
-        sources,
-        useModules,
+        _sources,
     )
 
 def _build(
@@ -30,12 +28,10 @@ def _build(
     _context,
     _target,
     _sources,
-    _useModules,
 ):
     _buildFunc(
         target = _target,
         source = _generateSources( _sources ),
-        use = _useModules,
         includes = _context.env.MY_INCLUDES,
         defines = _context.env.MY_DEFINES,
         cxxflags = _context.env.MY_CXXFLAGS,
