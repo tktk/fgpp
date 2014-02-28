@@ -5,7 +5,7 @@
 #include "fgpp/util/exportcommon.h"
 
 #define FGPP_DEFINE_FUNCTION( _func, _returnType, _dummyProc ) \
-    FGPPEXPORT _returnType _func { _dummyProc };
+    FGPPEXPORT _returnType _func { _dummyProc }
 #define FGPP_FUNCTION_VOID( _func ) \
     FGPP_DEFINE_FUNCTION( _func, void, )
 #define FGPP_FUNCTION_BOOL( _func ) \
@@ -16,7 +16,7 @@
     FGPP_DEFINE_FUNCTION( _func, _returnType *, return nullptr; )
 #define FGPP_FUNCTION_REF( _func, _returnType ) \
     FGPP_DEFINE_FUNCTION( _func, _returnType &, _returnType * tmp = nullptr; return *tmp; )
-#define FGPP_FUNCTION_ENUM( _func, _returnType, _dummyReturn ) \
-    FGPP_DEFINE_FUNCTION( _func, _returnType, return _dummyReturn; )
+#define FGPP_FUNCTION_ENUM( _func, _returnType, _dummyValue ) \
+    FGPP_DEFINE_FUNCTION( _func, _returnType, return _dummyValue; )
 
 #endif  // FGPP_UTIL_EXPORT_H
