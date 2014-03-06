@@ -5,10 +5,6 @@
 #include "fgpp/util/import.h"
 
 namespace fg {
-    enum {
-        MAX_UTF16_CHAR_COUNT = 2,
-    };
-
     FGPP_FUNCTION_BOOL(
         toUtf16(
             Utf16 &

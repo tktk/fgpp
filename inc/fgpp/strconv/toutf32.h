@@ -5,10 +5,6 @@
 #include "fgpp/util/import.h"
 
 namespace fg {
-    enum {
-        MAX_UTF32_CHAR_COUNT = 1,
-    };
-
     FGPP_FUNCTION_BOOL(
         toUtf32(
             Utf32 &
