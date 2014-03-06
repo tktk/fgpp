@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from . import common
-from . import cmdoption
-
 import os.path
 
 def getTargetName(
