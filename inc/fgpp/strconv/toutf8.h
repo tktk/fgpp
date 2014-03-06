@@ -13,6 +13,8 @@ namespace fg {
         toUtf8(
             Utf8 &
             , const String &
+            , Size &
+            , Size &
         )
     )
 
@@ -20,6 +22,8 @@ namespace fg {
         toUtf8(
             Utf8 &
             , const Utf16 &
+            , Size &
+            , Size &
         )
     )
 
@@ -27,6 +31,8 @@ namespace fg {
         toUtf8(
             Utf8 &
             , const Utf32 &
+            , Size &
+            , Size &
         )
     )
 }

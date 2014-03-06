@@ -15,6 +15,8 @@ namespace fg {
         toString(
             String &
             , const Utf8 &
+            , Size &
+            , Size &
         )
     )
 
@@ -22,6 +24,8 @@ namespace fg {
         toString(
             String &
             , const Utf16 &
+            , Size &
+            , Size &
         )
     )
 
@@ -29,6 +33,8 @@ namespace fg {
         toString(
             String &
             , const Utf32 &
+            , Size &
+            , Size &
         )
     )
 }
