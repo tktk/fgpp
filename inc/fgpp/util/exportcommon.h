@@ -1,6 +1,8 @@
 ﻿#ifndef FGPP_UTIL_EXPORTCOMMON_H
 #define FGPP_UTIL_EXPORTCOMMON_H
 
+#undef  FGPPEXPORT
+
 #if defined COMPILER_TYPE_CLANG // COMPILER_TYPE
 #   define FGPPEXPORT extern __attribute__( ( visibility( "default" ) ) )
 #elif defined COMPILER_TYPE_MSVC    // COMPILER_TYPE

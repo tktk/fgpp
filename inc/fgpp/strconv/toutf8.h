@@ -1,6 +1,7 @@
 ﻿#ifndef FGPP_STRCONV_TOUTF8_H
 #define FGPP_STRCONV_TOUTF8_H
 
+#include "fgpp/def/strconv/toutf8.h"
 #include "fgpp/def/common/primitives.h"
 #include "fgpp/util/import.h"
 

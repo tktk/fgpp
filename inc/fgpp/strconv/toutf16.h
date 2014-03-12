@@ -1,6 +1,7 @@
 ﻿#ifndef FGPP_STRCONV_TOUTF16_H
 #define FGPP_STRCONV_TOUTF16_H
 
+#include "fgpp/def/strconv/toutf16.h"
 #include "fgpp/def/common/primitives.h"
 #include "fgpp/util/import.h"
 
