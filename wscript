@@ -7,7 +7,7 @@ from wscripts import fgpp
 import os.path
 
 APPNAME = 'fgpp'
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 
 out = common.BUILD_DIR
 
