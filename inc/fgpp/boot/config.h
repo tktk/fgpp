@@ -2,6 +2,7 @@
 #define FGPP_BOOT_CONFIG_H
 
 #include "fgpp/def/boot/config.h"
+#include "fgpp/def/common/free.h"
 #include "fgpp/util/import.h"
 
 namespace fg {
@@ -16,8 +17,8 @@ namespace fg {
             BootConfig &
         )
     )
-}
 
-#include "fgpp/def/common/free.h"
+    FGPP_DEFINE_FREE( BootConfig )
+}
 
 #endif  // FGPP_BOOT_CONFIG_H
