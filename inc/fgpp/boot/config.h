@@ -34,6 +34,13 @@ namespace fg {
             , const Utf32 &
         )
     )
+
+    FGPP_FUNCTION_BOOL(
+        setMain(
+            BootConfig &
+            , const Utf32 &
+        )
+    )
 }
 
 #endif  // FGPP_BOOT_CONFIG_H
