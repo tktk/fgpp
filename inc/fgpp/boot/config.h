@@ -22,6 +22,13 @@ namespace fg {
     FGPP_DEFINE_FREE( BootConfig )
 
     FGPP_FUNCTION_BOOL(
+        setLoader(
+            BootConfig &
+            , const Utf32 &
+        )
+    )
+
+    FGPP_FUNCTION_BOOL(
         setMainFile(
             BootConfig &
             , const Utf32 &
